@@ -1,7 +1,7 @@
 #  About Me:
 I am a B.Tech Computer Science student specializing in Artificial Intelligence and Machine Learning, with a strong interest in building practical, real-world solutions. I have hands-on experience in AI, machine learning, and full-stack development, and I enjoy working on projects that combine data, backend systems, and intelligent decision-making.
 
-I have worked as a Python Developer and AI Intern, where I developed applications such as facial recognition, lane detection, and NLP-based personality prediction systems. Alongside this, I have built full-stack web applications including a lead-generation platform and campus utility tools using Flask, PHP, and MySQL.
+I have worked as a Python Developer and AI Intern, where I developed applications such as facial recognition, lane detection, and NLP-based personality prediction systems. Alongside this, I have built full-stack web applications including a lead-generation platform and campus utility tools using Flask, PHP, and MySQL.....
 
 I am proficient in Python, JavaScript, and backend frameworks like Flask and Django, with working knowledge of cloud tools, databases, and data analysis libraries. A Reliance Foundation Scholar and active problem solver, I continuously focus on learning, leadership, and applying technology to solve meaningful problems.
 
