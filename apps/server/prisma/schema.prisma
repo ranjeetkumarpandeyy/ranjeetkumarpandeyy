@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  HR
+  EMPLOYEE
+}
+
+model User {
+  id           String   @id @default(cuid())
+  fullName     String
+  email        String   @unique
+  passwordHash String
+  role         Role
+  department   String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  assignments  Assignment[]
+  workloadLogs WorkloadLog[]
+  feedbacks    Feedback[]
+}
+
+model Assignment {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  priority    Int
+  dueDate     DateTime
+  status      String
+  userId      String
+  createdAt   DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model WorkloadLog {
+  id           String   @id @default(cuid())
+  userId       String
+  taskCount    Int
+  overtimeHrs  Float
+  pressure     Int
+  riskScore    Float
+  riskBand     String
+  snapshotDate DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Feedback {
+  id         String   @id @default(cuid())
+  userId     String
+  stressNote String
+  stress     Int
+  createdAt  DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
